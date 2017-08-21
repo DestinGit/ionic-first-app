@@ -14,7 +14,14 @@
 
 
 <ion-content padding>
-  <h1>Hello {{userName}}</h1>
+  <p>{{now | date:'d/M/yyyy'}}</p>
+  <h1>Hello {{userName | uppercase}}</h1>
+
+  <h2>Vous êtes</h2>
+  <ion-list>
+    <ion-item *ngFor="let item of profession; let pos = index">{{1 + pos}} - {{item}}</ion-item>
+  </ion-list>
+
   <ion-list>
     <ion-item>
       <ion-label floating [color]="elementColor">Nom</ion-label>
@@ -26,15 +33,25 @@
     </ion-item>
 
     <ion-item>
-      <ion-label floating>profession</ion-label>
+        <ion-label floating>profession</ion-label>
+          <ion-select okText="valider" cancelText="Annuler" [(ngModel)] = "profession" multiple>
+            <ion-option>Dev</ion-option>
+            <ion-option>Chef</ion-option>
+            <ion-option>danger</ion-option>
+            <ion-option selected >dark</ion-option>
+          </ion-select>
+      </ion-item> 
+
+    <ion-item>
+      <ion-label floating>Couleurs</ion-label>
         <ion-select okText="valider" cancelText="Annuler" [(ngModel)] = "elementColor">
           <ion-option>Primary</ion-option>
           <ion-option>secondary</ion-option>
           <ion-option>danger</ion-option>
           <ion-option selected >dark</ion-option>
         </ion-select>
-    </ion-item> 
-
+    </ion-item>
+  
         <ion-list radio-group>
           <ion-list-header>Sexe</ion-list-header>
           <ion-item>
@@ -52,6 +69,6 @@
           <ion-toggle color="dark"></ion-toggle>
         </ion-item>
 
-        
+
   </ion-list>
 </ion-content>

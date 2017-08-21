@@ -18,6 +18,9 @@ export class FormPage {
   public pageTitle:String = "Mon super formulaire";
   public elementColor = 'danger';
   public userName:String = 'Tycho Brahé';
+  public profession:Array<String>;
+
+  public now = new Date();
   
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

@@ -10,8 +10,8 @@ import { CurrencyConverterPage } from './../pages/currency-converter/currency-co
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = CurrencyConverterPage;
-//  rootPage:any = FormPage;
+//  rootPage:any = CurrencyConverterPage;
+  rootPage:any = FormPage;
   
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
