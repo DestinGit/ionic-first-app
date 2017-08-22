@@ -8,7 +8,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { FormPage } from './../pages/form/form';
-import { AnimalsPage } from './../pages/animals/animals';
+// import { AnimalsPage } from './../pages/animals/animals';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,7 @@ import { AnimalsPage } from './../pages/animals/animals';
     HomePage,
     FormPage,
     CurrencyConverterPage,
-    AnimalsPage
+    // AnimalsPage
   ],
   imports: [
     BrowserModule,
@@ -28,7 +28,7 @@ import { AnimalsPage } from './../pages/animals/animals';
     HomePage,
     FormPage,
     CurrencyConverterPage,
-    AnimalsPage
+    // AnimalsPage
   ],
   providers: [
     StatusBar,

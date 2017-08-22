@@ -22,7 +22,8 @@ export class HomePage {
   }
 
   goToAnimals() {
-    this.navCtrl.push(AnimalsPage, {origin:'Je viens de home'})
+    this.navCtrl.push('animals-screen', {origin:'Je viens de home'})
+    // this.navCtrl.push(AnimalsPage, {origin:'Je viens de home'})
   }
 
   

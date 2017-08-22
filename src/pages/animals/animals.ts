@@ -8,7 +8,7 @@ import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angu
  * on Ionic pages and navigation.
  */
 
-@IonicPage()
+@IonicPage({name:"animals-screen"})
 @Component({
   selector: 'page-animals',
   templateUrl: 'animals.html',
