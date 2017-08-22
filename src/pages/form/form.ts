@@ -1,5 +1,6 @@
+// import { FormPage } from './form';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Events } from 'ionic-angular';
 
 /**
  * Generated class for the FormPage page.
@@ -22,7 +23,12 @@ export class FormPage {
 
   public now = new Date();
   
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public events: Events) {
+  }
+
+  submitData() {
+    this.events.publish('event.data', this.userName);
+    this.navCtrl.pop();
   }
 
   ionViewDidLoad() {

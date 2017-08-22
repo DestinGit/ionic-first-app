@@ -13,15 +13,18 @@
         hello
       </ion-col>
       <ion-col col-6>
-        World
+        World {{ connecteduser }}
       </ion-col>
     </ion-row>
   </ion-grid>
-  
-  <button ion-button outline>Default outline</button>
+
+  <button ion-button block (click)="goToForm()">Formulaire</button>
+  <button ion-button block (click)="goToAnimals()">Animaux</button>
+
+  <!-- <button ion-button outline>Default outline</button>
   <button ion-button icon-only color="secondary">Secondary</button>
   <button ion-button block color="danger">Danger block</button>
-  <button ion-button full color="dark">Dark full</button>
+  <button ion-button full color="dark">Dark full</button> -->
 
   <button ion-button icon-left>
       <ion-icon name="home"></ion-icon>

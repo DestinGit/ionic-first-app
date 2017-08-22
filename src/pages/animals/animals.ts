@@ -80,17 +80,19 @@ export class AnimalsPage {
     }
   ];
 
-  private media:any;
+  private media: any;
   // public type:any;
- 
+  private origin: String;
+
   constructor(public navCtrl: NavController, public navParams: NavParams, private toastCtrl: ToastController) {
+    this.origin = navParams.get('origin');
   }
 
   playSound(evt, animal) {
     this.media = new Audio();
     this.media.src = "assets" + animal.file;
     this.media.load();
-    this.media.play();     
+    this.media.play();
   }
 
   delete(index) {
@@ -103,15 +105,15 @@ export class AnimalsPage {
 
     // Suppression de l'animal via son index
     this.animals.splice(index, 1);
-  
+
     // present: c'est pour afficher son toast à l'écran
     toast.present();
   }
 
-/*   filter(choice){
-    this.type = choice;
-    }
- */
+  /*   filter(choice){
+      this.type = choice;
+      }
+   */
   ionViewDidLoad() {
     console.log('ionViewDidLoad AnimalsPage');
   }

@@ -27,6 +27,11 @@
       <ion-label floating [color]="elementColor">Nom</ion-label>
       <ion-input type="text" [(ngModel)] = "userName"></ion-input>
     </ion-item>
+
+    <ion-item>
+      <button ion-button block (click)="submitData()">Envoyer</button>
+    </ion-item>
+
     <ion-item>
       <ion-label stacked>Date de naissance</ion-label>
       <ion-input type="date"></ion-input>
