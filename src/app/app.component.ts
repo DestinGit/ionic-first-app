@@ -6,12 +6,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { FormPage } from './../pages/form/form';
 import { CurrencyConverterPage } from './../pages/currency-converter/currency-converter';
+import { AnimalsPage } from './../pages/animals/animals';
+
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-//  rootPage:any = CurrencyConverterPage;
-  rootPage:any = FormPage;
+  rootPage:any = AnimalsPage;
+//  rootPage:any = FormPage;
   
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
