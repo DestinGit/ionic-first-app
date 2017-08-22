@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 
 /**
  * Generated class for the AnimalsPage page.
@@ -81,17 +81,27 @@ export class AnimalsPage {
   ];
 
   private media:any;
+  public type:any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private toastCtrl: ToastController) {
   }
 
   playSound(evt, animal) {
     this.media = new Audio();
     this.media.src = "assets" + animal.file;
     this.media.load();
-    this.media.play(); 
-     
+    this.media.play();     
   }
+
+  delete(index) {
+    this.animals.splice(index, 1);
+    let toast = this.toastCtrl.create();
+  }
+
+  filter(choice){
+    this.type = choice;
+    }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad AnimalsPage');
   }

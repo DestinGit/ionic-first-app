@@ -15,8 +15,17 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-item-sliding *ngFor="let item of animals">
-<!--        <ion-item (click)="playSound($event, item)"> -->
+<!--  -->
+    <button ion-item [ngClass]="{active: type =='all'}"
+      (click)="filter('all')">all</button>
+      
+      <button ion-item [ngClass]="{active: type =='red'}"
+      (click)="filter('red')">red</button>
+      
+      <button ion-item [ngClass]="{active: type =='blue'}"
+      (click)="filter('blue')">blue</button>
+<!--  -->
+    <ion-item-sliding *ngFor="let item of animals; let pos=index">
         <ion-item>
             <ion-avatar item-left (click)="playSound($event, item)">
               <ion-img src="assets/{{item.image}}"></ion-img>
@@ -26,7 +35,7 @@
         </ion-item>
         
         <ion-item-options side="right">
-          <button ion-button ion-icon-only color="danger">
+          <button ion-button ion-icon-only color="danger" (click)="delete(pos);">
             <ion-icon name="trash"></ion-icon>
           </button>
         </ion-item-options>
