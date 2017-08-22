@@ -81,8 +81,8 @@ export class AnimalsPage {
   ];
 
   private media:any;
-  public type:any;
-
+  // public type:any;
+ 
   constructor(public navCtrl: NavController, public navParams: NavParams, private toastCtrl: ToastController) {
   }
 
@@ -108,10 +108,10 @@ export class AnimalsPage {
     toast.present();
   }
 
-  filter(choice){
+/*   filter(choice){
     this.type = choice;
     }
-
+ */
   ionViewDidLoad() {
     console.log('ionViewDidLoad AnimalsPage');
   }

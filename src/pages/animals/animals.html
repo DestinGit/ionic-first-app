@@ -16,7 +16,7 @@
 <ion-content padding>
   <ion-list>
 <!--  -->
-    <button ion-item [ngClass]="{active: type =='all'}"
+<!--     <button ion-item [ngClass]="{active: type =='all'}"
       (click)="filter('all')">all</button>
       
       <button ion-item [ngClass]="{active: type =='red'}"
@@ -24,7 +24,7 @@
       
       <button ion-item [ngClass]="{active: type =='blue'}"
       (click)="filter('blue')">blue</button>
-<!--  -->
+ --><!--  -->
 <ion-item-group reorder="true" (ionItemReorder)="$event.applyTo(animals)">
     <ion-item-sliding *ngFor="let item of animals; let pos=index">
         <ion-item>
