@@ -25,6 +25,7 @@
       <button ion-item [ngClass]="{active: type =='blue'}"
       (click)="filter('blue')">blue</button>
 <!--  -->
+<ion-item-group reorder="true">
     <ion-item-sliding *ngFor="let item of animals; let pos=index">
         <ion-item>
             <ion-avatar item-left (click)="playSound($event, item)">
@@ -40,5 +41,6 @@
           </button>
         </ion-item-options>
     </ion-item-sliding>
+  </ion-item-group>
   </ion-list>
 </ion-content>
