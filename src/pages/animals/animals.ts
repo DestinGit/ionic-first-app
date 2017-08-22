@@ -94,8 +94,18 @@ export class AnimalsPage {
   }
 
   delete(index) {
+    // Création du toast, définition de son toast
+    let toast = this.toastCtrl.create({
+      message: this.animals[index].title + ' a été supprimé',
+      duration: 1500,
+      position: 'top'
+    });
+
+    // Suppression de l'animal via son index
     this.animals.splice(index, 1);
-    let toast = this.toastCtrl.create();
+  
+    // present: c'est pour afficher son toast à l'écran
+    toast.present();
   }
 
   filter(choice){
